@@ -9,9 +9,9 @@ const Home = () => {
         <div className="Home view">
             <TopBar showProfile showTrophies showCoins/>
             <h1 className="home-title title extra-large">Trivya</h1>
-            <BigButton icon={faPlay} color="#92D35B">Play</BigButton>
-            <BigButton icon={faListOl} color="#629DE3">Ranks</BigButton>
-            <BigButton icon={faStore} color="#DBC55F">Store</BigButton>
+            <BigButton icon={faPlay} color="#92D35B" destination="game">Play</BigButton>
+            <BigButton icon={faListOl} color="#629DE3" destination="ranks">Ranks</BigButton>
+            <BigButton icon={faStore} color="#DBC55F" destination="store">Store</BigButton>
         </div>
     );
 };
