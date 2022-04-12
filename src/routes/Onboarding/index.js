@@ -5,7 +5,7 @@ import './Onboarding.css';
 const Onboarding = () => {
     return (
         <div className="Oboarding">
-            <h1 className="onboarding-title extra-large">
+            <h1 className="title extra-large">
                 TRIV
                 <br />
                 YA
