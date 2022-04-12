@@ -5,6 +5,15 @@
     display: flex;
 }
 
+.top-bar-btn {
+    border: none;
+    background-color: transparent;
+}
+
+.exit-icon {
+    color: var(--white);
+}
+
 .top-bar-section {
     flex: 1;
     display: flex;

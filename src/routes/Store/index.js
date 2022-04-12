@@ -7,9 +7,9 @@ const Store = () => {
     return (
         <div className="Store">
             <TopBar text="Store" showBackArrow showCoins/>
-            <StoreCategory categoryName="Themes"/>
-            <StoreCategory categoryName="Sounds"/>
-            <StoreCategory categoryName="Accessories"/>
+            <StoreCategory categoryName="Themes" color="#5BBFDF" />
+            <StoreCategory categoryName="Sounds" color="#DF5BCA" />
+            <StoreCategory categoryName="Accessories" color="#EBB668" />
         </div>
     );
 };

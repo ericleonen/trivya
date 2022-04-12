@@ -3,10 +3,10 @@ import StoreItem from './StoreItem';
 
 import './StoreCategory.css';
 
-const StoreCategory = ({ categoryName }) => {
+const StoreCategory = ({ categoryName, color }) => {
     return (
         <div className="StoreCategory">
-            <StoreBanner>{categoryName}</StoreBanner>
+            <StoreBanner color={color}>{categoryName}</StoreBanner>
             <div className="store-item-list">
                 <StoreItem />
                 <StoreItem />

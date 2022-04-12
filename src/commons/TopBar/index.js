@@ -1,8 +1,12 @@
+import { useNavigate } from 'react-router-dom';
+
 import './TopBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faXmark, faTrophy, faCoins } from '@fortawesome/free-solid-svg-icons';
 
 const TopBar = ({ text, showProfile, showTrophies, showCoins, showBackArrow, showExitX }) => {
+    const navigate = useNavigate();
+    
     return (
         <div className="TopBar">
             {
@@ -18,16 +22,16 @@ const TopBar = ({ text, showProfile, showTrophies, showCoins, showBackArrow, sho
             { 
                 showBackArrow && 
                 <div className="top-bar-section">
-                    <button className="top-bar-btn">
-                        <FontAwesomeIcon icon={faArrowLeft} />
+                    <button className="top-bar-btn" onClick={() => navigate('/app')}>
+                        <FontAwesomeIcon icon={faArrowLeft} className="exit-icon icon" />
                     </button> 
                 </div>
             }
             { 
                 showExitX && 
                 <div className="top-bar-section">
-                    <button className="top-bar-btn">
-                        <FontAwesomeIcon icon={faXmark} />
+                    <button className="top-bar-btn" onClick={() => navigate('/app')}>
+                        <FontAwesomeIcon icon={faXmark} className="exit-icon icon" />
                     </button>
                 </div> 
             }
