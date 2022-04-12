@@ -10,6 +10,10 @@ const StoreCategory = ({ categoryName, color }) => {
             <div className="store-item-list">
                 <StoreItem />
                 <StoreItem />
+                <StoreItem />
+                <StoreItem />
+                <StoreItem />
+                <StoreItem />
             </div>
         </div>
     );

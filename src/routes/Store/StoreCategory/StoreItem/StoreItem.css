@@ -1,0 +1,31 @@
+.StoreItem {
+    margin-right: 15px;
+}
+
+.store-item-img {
+    width: 60%;
+}
+
+.store-item-name {
+    color: var(--black) !important;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+.store-item-price {
+    width: 100%;
+    text-align: center;
+    color: var(--black) !important;
+    font-weight: bold;
+}
+
+.store-item-coins-container {
+    display: flex;
+    margin-top: 5px;
+}
+
+.store-item-coins-icon path {
+    stroke: var(--black);
+    stroke-width: 20px;
+}

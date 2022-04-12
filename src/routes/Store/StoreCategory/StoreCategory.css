@@ -1,0 +1,6 @@
+.store-item-list {
+    display: flex;
+    width: 100%;
+    padding: 20px 0 15px 15px;
+    overflow-y: scroll;
+}
