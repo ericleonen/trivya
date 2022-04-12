@@ -1,5 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;500&display=swap');
+
+:root {
+  --dark-gray: #3F3F3F;
+  --gray: #555555;
+  --white: #FDFDFD;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--gray);
+}
+
+.view {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-family: 'Luckiest Guy', cursive;
+  color: var(--white);
+  text-align: center;
+  font-weight: normal;
+  width: 100%;
+  transform: translateY(5px);
+}
+
+.text {
+  font-family: 'Poppins', sans-serif;
+  color: var(--white);
+  font-weight: medium;
+  margin: 0 7px;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.medium { font-size: 20px }
+.large { font-size: 36px }
+.extra-large { font-size: 64px }
+
+.profile-img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.trophy-icon {
+  color: #E7CB39;
+}
+
+.coins-icon {
+  color: #EBCE68;
 }

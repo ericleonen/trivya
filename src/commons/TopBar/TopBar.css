@@ -1,0 +1,17 @@
+.TopBar {
+    width: 100%;
+    height: 45px;
+    background-color: var(--dark-gray);
+    display: flex;
+}
+
+.top-bar-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.top-bar-stats {
+    justify-content: flex-end;
+}
