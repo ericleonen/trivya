@@ -5,7 +5,7 @@ import './Store.css';
 
 const Store = () => {
     return (
-        <div className="Store">
+        <div className="Store view">
             <TopBar text="Store" showBackArrow showCoins/>
             <StoreCategory categoryName="Themes" color="#5BBFDF" />
             <StoreCategory categoryName="Sounds" color="#DF5BCA" />

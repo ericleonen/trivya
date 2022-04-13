@@ -11,7 +11,7 @@ const StoreItem = () => {
                 <p className="text store-item-name">Item</p>
                 <img className="store-item-img" src="https://pngimg.com/uploads/teddy_bear/teddy_bear_PNG94.png"/>
                 <div className="store-item-coins-container">
-                    <FontAwesomeIcon icon={faCoins} className="store-item-coins-icon coins-icon icon"/>
+                    <FontAwesomeIcon icon={faCoins} className="coins-icon icon icon-border"/>
                     <p className="store-item-price text">50</p>
                 </div>
             </Container>

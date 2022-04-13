@@ -1,0 +1,32 @@
+.Profile {
+    width: 80%;
+    margin-bottom: 25px;
+}
+
+.Profile:first-child {
+    margin-top: 25px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.profile-section:nth-child(2) {
+    justify-content: flex-end;
+}
+
+.profile-rank {
+    color: var(--black) !important;
+    font-weight: bold !important;
+}
+
+.profile-username {
+    color: var(--black) !important;
+}
+
+.profile-trophies {
+    color: var(--black) !important;
+    font-weight: bold !important;
+}

@@ -22,6 +22,9 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding-top: 45px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .title {
@@ -36,12 +39,17 @@ body {
 .text {
   font-family: 'Poppins', sans-serif;
   color: var(--white);
-  font-weight: medium;
+  font-weight: 500;
   margin: 0 7px;
 }
 
 .icon {
   font-size: 20px;
+}
+
+.icon-border {
+  stroke: var(--black);
+  stroke-width: 20px;
 }
 
 .medium { font-size: 20px }

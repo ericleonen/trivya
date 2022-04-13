@@ -24,8 +24,3 @@
     display: flex;
     margin-top: 5px;
 }
-
-.store-item-coins-icon path {
-    stroke: var(--black);
-    stroke-width: 20px;
-}

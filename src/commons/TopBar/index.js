@@ -16,7 +16,7 @@ const TopBar = ({ text, showProfile, showTrophies, showCoins, showBackArrow, sho
                         src="https://i.pinimg.com/originals/36/60/58/366058cd421e6a981e50c6f800abbbd0.png" 
                         className="profile-img" 
                     />
-                    <p className="profile-username text">Batman</p>
+                    <p className="top-bar-profile-username text">Batman</p>
                 </div>
             }
             { 
