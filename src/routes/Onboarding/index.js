@@ -18,7 +18,7 @@ const Onboarding = () => {
             <p className="no-account-text text">
                 Don't have an account? 
                 <br /> 
-                <Link to="user/signup" className="sign-up-link">Sign-up</Link> here.
+                <Link to="user/signup" className="sign-up-link">Sign up</Link> here.
             </p>
         </div>
     );
