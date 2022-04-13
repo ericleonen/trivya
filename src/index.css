@@ -5,6 +5,7 @@
   --gray: #555555;
   --white: #FDFDFD;
   --black: #282828;
+  --purple: #CF9FFF;
 }
 
 * {
@@ -43,6 +44,10 @@ body {
   margin: 0 7px;
 }
 
+.title-dark, .text-dark {
+  color: var(--black);
+}
+
 .icon {
   font-size: 20px;
 }
@@ -55,6 +60,7 @@ body {
 .medium { font-size: 20px }
 .large { font-size: 36px }
 .extra-large { font-size: 64px }
+.extra-extra-large { font-size: 90px }
 
 .profile-img {
   height: 35px;
@@ -68,4 +74,8 @@ body {
 
 .coins-icon {
   color: #EBCE68;
+}
+
+.input-fields {
+  margin: 25px 0 50px;
 }

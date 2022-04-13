@@ -1,0 +1,15 @@
+.onboarding-title {
+    margin: 20px 0;
+}
+
+.no-account-text {
+    text-align: center;
+}
+
+.sign-up-link {
+    color: var(--purple);
+}
+
+.sign-up-link:visited {
+    color: var(--purple);
+}

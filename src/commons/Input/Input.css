@@ -1,0 +1,16 @@
+.Input {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.input-label {
+    width: 80%;
+    padding: 5px 0;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+}

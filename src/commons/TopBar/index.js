@@ -22,7 +22,7 @@ const TopBar = ({ text, showProfile, showTrophies, showCoins, showBackArrow, sho
             { 
                 showBackArrow && 
                 <div className="top-bar-section">
-                    <button className="top-bar-btn" onClick={() => navigate('/app')}>
+                    <button className="top-bar-btn" onClick={() => navigate(-1)}>
                         <FontAwesomeIcon icon={faArrowLeft} className="exit-icon icon" />
                     </button> 
                 </div>
@@ -30,7 +30,7 @@ const TopBar = ({ text, showProfile, showTrophies, showCoins, showBackArrow, sho
             { 
                 showExitX && 
                 <div className="top-bar-section">
-                    <button className="top-bar-btn" onClick={() => navigate('/app')}>
+                    <button className="top-bar-btn" onClick={() => navigate('app')}>
                         <FontAwesomeIcon icon={faXmark} className="exit-icon icon" />
                     </button>
                 </div> 

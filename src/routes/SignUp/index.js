@@ -4,12 +4,14 @@ import Button from '../../commons/Button';
 
 const SignUp = () => {
     return (
-        <div className="SignUp">
-            <TopBar text="Sign Up"/>
-            <Input label="username"/>
-            <Input label="email" />
-            <Input label="password" />
-            <Button>Sign Up</Button>
+        <div className="SignUp view">
+            <TopBar text="Sign Up" showBackArrow/>
+            <div className="input-fields">
+                <Input label="username"/>
+                <Input label="email" />
+                <Input label="password" />
+            </div>
+            <Button color="#92D35B" darkText>Sign Up</Button>
         </div>
     );
 };
