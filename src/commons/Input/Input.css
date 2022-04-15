@@ -14,3 +14,7 @@
     width: 100%;
     border: none;
 }
+
+.input-text::selection {
+    background: rgb(126, 189, 240);
+}

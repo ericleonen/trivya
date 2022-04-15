@@ -1,8 +1,8 @@
 import './Button.css';
 
-const Button = ({ color, children, darkText, blendText, func }) => {
+const Button = ({ color, children, darkText, func, disabled }) => {
     return (
-        <button className="Button" onClick={func}>
+        <button className="Button" onClick={func} disabled={disabled}>
             <div className="btn-push" style={{backgroundColor: color}}>
                 <div className="btn-face" style={{backgroundColor: color}}>
                     <p 

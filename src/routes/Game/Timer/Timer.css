@@ -10,6 +10,16 @@
 }
 
 .timer-inner-bar {
-    width: 100%;
     height: 100%;
+    background-color: #228B22;
+    animation: progress 60s;
+}
+
+@keyframes progress {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
 }

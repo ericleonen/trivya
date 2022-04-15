@@ -79,3 +79,16 @@ body {
 .input-fields {
   margin: 25px 0 50px;
 }
+
+.user-sub-text {
+  text-align: center;
+  width: 100%;
+}
+
+.link {
+  color: var(--purple);
+}
+
+.link:visited {
+  color: var(--purple);
+}

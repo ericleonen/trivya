@@ -12,6 +12,7 @@ const Input = ({ label, value, setValue, placeholder }) => {
                     placeholder={placeholder} 
                     id={label}
                     className="input-text text text-dark"
+                    onChange={e => setValue(e.target.value)}
                 />
             </Container>
         </div>
