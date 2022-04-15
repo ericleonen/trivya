@@ -5,15 +5,18 @@ import AnswerChoice from './AnswerChoice';
 import { useState, useEffect } from 'react';
 import he from 'he';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { rewardUser } from '../../firebase/user';
+import { getUserData, rewardUser } from '../../firebase/user';
 import { auth } from '../../firebase/authentication';
 
 import './Game.css';
+import GameOver from './GameOver';
 
 const Game = () => {
     const [user, loading, error] = useAuthState(auth);
     const [question, setQuestion] = useState({});
     const [showResults, setShowResults] = useState(false);
+    const [timeUp, setTimeUp] = useState(false);
+    const [userData, setUserData] = useState({});
 
     const getNewQuestion = () => {
         fetch('https://opentdb.com/api.php?amount=1&category=9&type=multiple')
@@ -49,26 +52,44 @@ const Game = () => {
 
     useEffect(() => {
         getNewQuestion();
+        
+        (async () => {
+            setUserData(await getUserData(user.uid));
+        })();
     }, []);
+
+    const resetGame = () => {
+        setShowResults(false);
+        setTimeUp(false);
+        getNewQuestion();
+        
+        (async () => {
+            setUserData(await getUserData(user.uid));
+        })();
+    };
 
     return (
         <div className="Game view">
-            <TopBar showExitX showTrophies showCoins/>
-            <Timer />
-            <QuestionCard>{Object.keys(question).length > 0 && he.decode(question.question)}</QuestionCard>
-            <div className="answer-choices">
-                { Object.keys(question).length > 0 && question.answerChoices.map((choice, i) => {
-                    return <AnswerChoice 
-                                key={'answer_choice_' + i} 
-                                choiceNum={i}
-                                chooseAnswer={chooseAnswer}
-                                showResults={showResults}
-                                isCorrect={i === question.correctChoice}
-                            >
-                                {he.decode(choice)}
-                            </AnswerChoice>
-                }) }
-            </div>
+            <TopBar showExitX showTrophies showCoins />
+            { timeUp ? <GameOver startUserData={userData} uid={user.uid} playAgain={resetGame} /> :
+                <>
+                    <Timer setTimeUp={setTimeUp} />
+                    <QuestionCard>{Object.keys(question).length > 0 && he.decode(question.question)}</QuestionCard>
+                    <div className="answer-choices">
+                        { Object.keys(question).length > 0 && question.answerChoices.map((choice, i) => {
+                            return <AnswerChoice 
+                                        key={'answer_choice_' + i} 
+                                        choiceNum={i}
+                                        chooseAnswer={chooseAnswer}
+                                        showResults={showResults}
+                                        isCorrect={i === question.correctChoice}
+                                    >
+                                        {he.decode(choice)}
+                                    </AnswerChoice>
+                        }) }
+                    </div>
+                </>
+            }
         </div>
     );
 };

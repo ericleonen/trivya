@@ -1,0 +1,25 @@
+.GameOver {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 55px;
+    justify-content: center;
+}
+
+.game-over-sub-title {
+    color: #92D35B;
+}
+
+.game-over-stat {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.game-over-stat:first-of-type {
+    margin-top: 20px;
+}
+
+.game-over-stat:last-of-type {
+    margin-bottom: 30px;
+}

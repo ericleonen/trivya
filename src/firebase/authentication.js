@@ -7,24 +7,13 @@ import {
     sendPasswordResetEmail,
     signOut
   } from 'firebase/auth';
-import { doc, getDoc, setDoc } from 'firebase/firestore'
+import { doc, setDoc } from 'firebase/firestore'
 import { app, db } from '.';
+import { getUserData } from './user';
 
 export const auth = getAuth(app);
 
 const googleProvider = new GoogleAuthProvider();
-
-export const getUserData = async (uid) => {
-    const docRef = doc(db, 'users', uid + '');
-    const docSnap = await getDoc(docRef);
-
-    if (docSnap.exists()) {
-        return docSnap.data();
-    }
-    else {
-        return null;
-    }
-}; 
 
 export const signInWithGoogle = async () => {
     try {
@@ -38,7 +27,8 @@ export const signInWithGoogle = async () => {
                 authProvider: 'google',
                 email: user.email,
                 trophies: 0,
-                coins: 0
+                coins: 0,
+                highScore: 0
             });
         }
     }
@@ -68,7 +58,8 @@ export const registerWithEmailAndPassword = async (name, email, password) => {
                 authProvider: 'local',
                 email,
                 trophies: 0,
-                coins: 0
+                coins: 0,
+                highScore: 0
             });
         }
     }

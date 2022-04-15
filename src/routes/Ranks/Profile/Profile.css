@@ -24,6 +24,7 @@
 
 .profile-username {
     color: var(--black) !important;
+    white-space: nowrap;
 }
 
 .profile-trophies {

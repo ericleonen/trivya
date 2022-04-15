@@ -2,16 +2,15 @@ import { useEffect, useState } from 'react';
 
 import './Timer.css';
 
-const Timer = () => {
-    const [timer, setTimer] = useState();
+const Timer = ({ setTimeUp }) => {
     useEffect(() => {
-        const t = setTimeout(() => {
-            alert('hey');
-        }, 60000);
+        const timer = setTimeout(() => {
+            setTimeUp(true);
+        }, 60 * 1000);
 
-        setTimer(t);
-
-        return clearTimeout(timer);
+        return () => {
+            clearTimeout(timer)
+        };
     }, []);
 
     return (
