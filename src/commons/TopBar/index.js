@@ -16,8 +16,7 @@ const TopBar = ({ text, showProfile, showTrophies, showCoins, showBackArrow, sho
 
     useEffect(() => {
         if (user) {
-            const unsubscribe = userListener(user.uid, setUserData);
-            console.log(userData);
+            const unsubscribe = userListener(user.uid, setUserData)();
             return unsubscribe;
         }
     }, [user, setUserData]);
