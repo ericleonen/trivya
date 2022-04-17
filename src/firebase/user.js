@@ -15,7 +15,7 @@ export const rewardUser = async (uid) => {
     console.log('e');
     const userRef = doc(db, 'users', uid);
     await updateDoc(userRef, {
-        coins: increment(1),
+        coins: increment(5),
         trophies: increment(1),
     });
 };
@@ -23,7 +23,9 @@ export const rewardUser = async (uid) => {
 export const userListener = (uid, setUserData) => {
     return () => {
         const unsubscribe = onSnapshot(doc(db, 'users', uid), (snap) => {
-            setUserData(snap.data());
+            if (snap.data()) {
+                setUserData(snap.data());
+            }
         });
 
         return unsubscribe;

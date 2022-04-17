@@ -13,17 +13,25 @@ export const store = {
     'Accessories': {
         color: '#5BBFDF',
         items: {
+            'Books': generateItem(5),
             'Rock': generateItem(25),
             'Ducky': generateItem(50),
-            'Teddy Bear': generateItem(100)
+            'Teddy Bear': generateItem(100),
+            'Panda': generateItem(250),
+            'Tank': generateItem(500),
+            'Diamond': generateItem(1000)
         }
     },
     'Avatars': {
         color: '#A020F0',
         items: {
-            'Happy': generateItem(25),
-            'Batman': generateItem(50),
-            'Einstein': generateItem(100)
+            'Happy': generateItem(5),
+            'Batman': generateItem(25),
+            'World': generateItem(50),
+            'Suit': generateItem(100),
+            'Plato': generateItem(250),
+            'Einstein': generateItem(500),
+            'Mind Blown': generateItem(1000)
         }
     }
 };
