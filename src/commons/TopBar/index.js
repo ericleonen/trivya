@@ -13,7 +13,7 @@ import { faArrowLeft, faXmark, faTrophy, faCoins } from '@fortawesome/free-solid
 const TopBar = ({ text, showProfile, showTrophies, showCoins, showBackArrow, showExitX }) => {
     const navigate = useNavigate();
     
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const [userData, setUserData] = useState({});
 
     useEffect(() => {
@@ -34,6 +34,7 @@ const TopBar = ({ text, showProfile, showTrophies, showCoins, showBackArrow, sho
                     <img 
                         src={(userData && Object.keys(userData).length > 0) ? `/storeAssets/Avatars/` + getItemImg(userData?.inventory.Avatars) : 'boring'} 
                         className="profile-img" 
+                        alt="avatar"
                     />
                     <p className="top-bar-profile-username text">{userData?.name}</p>
                 </div>

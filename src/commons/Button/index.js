@@ -1,8 +1,12 @@
 import './Button.css';
 
 const Button = ({ color, children, darkText, func, disabled }) => {
+    const doFunc = () => {
+        setTimeout(func, 200);
+    };
+
     return (
-        <button className="Button" onClick={func} disabled={disabled}>
+        <button className="Button" onClick={doFunc} disabled={disabled}>
             <div className="btn-push" style={{backgroundColor: color}}>
                 <div className="btn-face" style={{backgroundColor: color}}>
                     <p 

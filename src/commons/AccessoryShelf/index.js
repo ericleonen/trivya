@@ -25,10 +25,12 @@ const AccessoryShelf = () => {
             <img 
                 src={`/storeAssets/Accessories/` + getItemImg(userData?.inventory.Accessories)} 
                 className="accessory-img" 
+                alt="accessory"
             />
             <img 
                 src={`/storeAssets/Accessories/stool.png`} 
                 className="stool-img" 
+                alt="stool"
             />
         </div>
     );

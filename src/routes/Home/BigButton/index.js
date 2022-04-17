@@ -6,8 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const BigButton = ({ children, icon, color, destination }) => {
     const navigate = useNavigate();
 
+    const doFunc = () => {
+        setTimeout(() => navigate(destination), 200);
+    }
+
     return (
-        <button className="BigButton" onClick={() => navigate(destination)}>
+        <button className="BigButton" onClick={doFunc}>
             <div className="big-btn-push" style={{backgroundColor: color}}>
                 <div className="big-btn-face" style={{backgroundColor: color}}>
                     <p className="big-btn-title title large" style={{color: color}}>{children}</p>

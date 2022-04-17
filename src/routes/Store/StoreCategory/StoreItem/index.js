@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoins } from '@fortawesome/free-solid-svg-icons';
 
 const StoreItem = ({ itemName, price, canBuy, category, isPurchased, isSelected }) => {
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
 
     const makePurchase = () => {
         buyItem(user.uid, category, itemName, price);
@@ -23,7 +23,7 @@ const StoreItem = ({ itemName, price, canBuy, category, isPurchased, isSelected 
         <div className="StoreItem">
             <Container color={isSelected ? "#92D35B" : "#E0E0E0"} height="145px" width="135px" centerContent>
                 <p className="text store-item-name">{itemName}</p>
-                <img className="store-item-img" src={`/storeAssets/${category}/` + getItemImg(itemName)} />
+                <img className="store-item-img" src={`/storeAssets/${category}/` + getItemImg(itemName)} alt="store item" />
             </Container>
             { isPurchased ?
                 <Button
