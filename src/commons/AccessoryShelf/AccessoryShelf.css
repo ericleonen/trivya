@@ -1,0 +1,23 @@
+.AccessoryShelf {
+    display: flex;
+    width: 200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    height: 160px;
+    pointer-events: none;
+}
+
+.accessory-img {
+    width: 125px;
+    z-index: 1;
+}
+
+.stool-img {
+    width: 200px;
+    transform: translateX(-10px);
+    margin-top: -70px;
+}

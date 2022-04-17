@@ -1,12 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useEffect, useState } from 'react';
-import { auth, getUserData } from '../../firebase/authentication';
+import { auth } from '../../firebase/authentication';
+import { userListener } from '../../firebase/user';
+import { getItemImg } from '../../firebase/store';
 
 import './TopBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faXmark, faTrophy, faCoins } from '@fortawesome/free-solid-svg-icons';
-import { userListener } from '../../firebase/user';
+import { faArrowLeft, faXmark, faTrophy, faCoins } from '@fortawesome/free-solid-svg-icons'
 
 const TopBar = ({ text, showProfile, showTrophies, showCoins, showBackArrow, showExitX }) => {
     const navigate = useNavigate();
@@ -27,7 +28,7 @@ const TopBar = ({ text, showProfile, showTrophies, showCoins, showBackArrow, sho
                 showProfile &&
                 <div className="top-bar-section">
                     <img 
-                        src="https://i.pinimg.com/originals/36/60/58/366058cd421e6a981e50c6f800abbbd0.png" 
+                        src={(userData && Object.keys(userData).length > 0) && `/storeAssets/Avatars/` + getItemImg(userData?.inventory.Avatars)} 
                         className="profile-img" 
                     />
                     <p className="top-bar-profile-username text">{userData?.name}</p>

@@ -1,9 +1,15 @@
 .StoreItem {
     margin-right: 15px;
+    width: 168.75px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
 }
 
 .store-item-img {
-    width: 60%;
+    height: 60px;
+    filter: brightness(0.8);
 }
 
 .store-item-name {
@@ -11,6 +17,7 @@
     font-weight: bold;
     width: 100%;
     text-align: center;
+    white-space: nowrap;
 }
 
 .store-item-price {

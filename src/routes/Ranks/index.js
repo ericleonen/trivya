@@ -2,6 +2,7 @@ import TopBar from '../../commons/TopBar';
 import Profile from './Profile';
 import { getUsersRanked } from '../../firebase/user';
 import { useEffect, useState } from 'react';
+import AccessoryShelf from '../../commons/AccessoryShelf';
 
 import './Ranks.css';
 
@@ -16,7 +17,7 @@ const Ranks = () => {
 
     return (
         <div className="Ranks view">
-             <TopBar text="Ranks" showBackArrow showTrophies/>
+            <TopBar text="Ranks" showBackArrow showTrophies/>
             <div className="profiles-list">
                 {
                     usersRanked.map((profile, i) => {
@@ -24,10 +25,12 @@ const Ranks = () => {
                                         rank={i} 
                                         username={profile.name} 
                                         trophies={profile.trophies} 
+                                        avatar={profile.inventory.Avatars}
                                />
                     })
                 }
             </div>
+            <AccessoryShelf />
         </div>
     );
 };

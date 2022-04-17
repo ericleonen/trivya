@@ -10,6 +10,7 @@ import { auth } from '../../firebase/authentication';
 
 import './Game.css';
 import GameOver from './GameOver';
+import AccessoryShelf from '../../commons/AccessoryShelf';
 
 const Game = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -90,6 +91,7 @@ const Game = () => {
                     </div>
                 </>
             }
+            <AccessoryShelf />
         </div>
     );
 };

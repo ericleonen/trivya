@@ -64,4 +64,4 @@ export const updateHighScore = async (uid, score) => {
     await updateDoc(userRef, {
         highScore: score
     });
-}
+};

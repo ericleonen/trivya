@@ -9,9 +9,8 @@ import ForgotPassword from './routes/ForgotPassword';
 import { Routes, Route } from 'react-router';
 import { auth } from './firebase/authentication';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router';
-import { getUserData } from './firebase/authentication';
 
 import './App.css';
 

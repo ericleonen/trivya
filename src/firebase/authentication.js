@@ -10,6 +10,7 @@ import {
 import { doc, setDoc } from 'firebase/firestore'
 import { app, db } from '.';
 import { getUserData } from './user';
+import { store } from './store';
 
 export const auth = getAuth(app);
 
@@ -28,7 +29,12 @@ export const signInWithGoogle = async () => {
                 email: user.email,
                 trophies: 0,
                 coins: 0,
-                highScore: 0
+                highScore: 0,
+                store,
+                inventory: {
+                    Accessories: 'none',
+                    Avatars: 'boring'
+                }
             });
         }
     }
@@ -59,7 +65,12 @@ export const registerWithEmailAndPassword = async (name, email, password) => {
                 email,
                 trophies: 0,
                 coins: 0,
-                highScore: 0
+                highScore: 0,
+                store,
+                inventory: {
+                    Accessories: 'none',
+                    Avatars: 'boring'
+                }
             });
         }
     }
