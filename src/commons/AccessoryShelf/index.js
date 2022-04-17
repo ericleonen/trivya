@@ -8,7 +8,7 @@ import './AccessoryShelf.css';
 
 const AccessoryShelf = () => {
     const [userData, setUserData] = useState({});
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
 
     useEffect(() => {
         if (user) {
@@ -18,7 +18,7 @@ const AccessoryShelf = () => {
                 setUserData({});
             };
         }
-    }, [setUserData]);
+    }, [setUserData, user]);
 
     return (Object.keys(userData).length > 0 && userData.inventory.Accessories !== 'none') && (
         <div className="AccessoryShelf">

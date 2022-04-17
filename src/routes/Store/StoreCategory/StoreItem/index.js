@@ -39,10 +39,8 @@ const StoreItem = ({ itemName, price, canBuy, category, isPurchased, isSelected 
                     disabled={!canBuy}
                     func={makePurchase}
                 >
-                    <div className="store-item-coins-container">
-                        <FontAwesomeIcon icon={faCoins} className="coins-icon icon icon-border"/>
-                        <p className="store-item-price text">{price}</p>
-                    </div>
+                    <FontAwesomeIcon icon={faCoins} className="coins-icon icon icon-border store-coins-icon"/>
+                    {price}
                 </Button>
             }
         </div>

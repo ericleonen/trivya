@@ -29,3 +29,7 @@
 .top-bar-stats {
     justify-content: flex-end;
 }
+
+.logout-btn {
+    margin-right: 10px;
+}

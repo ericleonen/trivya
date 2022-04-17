@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { auth } from '../../firebase/authentication';
 import { userListener } from '../../firebase/user';
 import { getItemImg } from '../../firebase/store';
+import { logout } from '../../firebase/authentication';
 
 import './TopBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -27,8 +28,11 @@ const TopBar = ({ text, showProfile, showTrophies, showCoins, showBackArrow, sho
             {
                 showProfile &&
                 <div className="top-bar-section">
+                    <button onClick={logout} className="top-bar-btn logout-btn">
+                        <FontAwesomeIcon icon={faArrowLeft} className="exit-icon icon" />
+                    </button>
                     <img 
-                        src={(userData && Object.keys(userData).length > 0) && `/storeAssets/Avatars/` + getItemImg(userData?.inventory.Avatars)} 
+                        src={(userData && Object.keys(userData).length > 0) ? `/storeAssets/Avatars/` + getItemImg(userData?.inventory.Avatars) : 'boring'} 
                         className="profile-img" 
                     />
                     <p className="top-bar-profile-username text">{userData?.name}</p>

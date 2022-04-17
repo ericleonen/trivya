@@ -21,7 +21,8 @@ body {
 
 .view {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-flow: column;
   flex-wrap: wrap;
   padding-top: 45px;
   width: 100%;

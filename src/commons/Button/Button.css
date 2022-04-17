@@ -5,6 +5,7 @@
     border: none;
     margin-bottom: 20px;
     background-color: transparent;
+    max-width: 400px;
 }
 
 .btn-push {
@@ -33,4 +34,6 @@
 
 .btn-text {
     font-weight: bold;
+    display: flex;
+    justify-content: center;
 }
