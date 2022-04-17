@@ -5,7 +5,7 @@ import './Input.css';
 const Input = ({ label, value, setValue, placeholder }) => {
     return (
         <div className="Input">
-            <label for={label} className="input-label text">{label}</label>
+            <label htmlFor={label} className="input-label text">{label}</label>
             <Container color="#E0E0E0" width="80%">
                 <input 
                     value={value} 
